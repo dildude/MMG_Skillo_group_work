@@ -1,0 +1,8 @@
+//footer[@class='d-none d-md-block']//div[@class='container']
+//footer[@class='d-none d-md-block']//div[@class='row']
+//footer[@class='d-none d-md-block']//div[@class='col-5 col-lg-3 footer-container']
+//footer[@class='d-none d-md-block']//div[contains(text(),'Version')]
+//footer[@class='d-none d-md-block']//div[contains(text(),'Technologies')]
+//footer[@class='d-none d-md-block']//img[1]
+//footer[@class='d-none d-md-block']//img[2]
+//footer[@class='d-none d-md-block']//img[3]
