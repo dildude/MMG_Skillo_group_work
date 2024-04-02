@@ -1,0 +1,41 @@
+HEADER'S XPATHS: #Verify #Type #Click
+#Logo
+//*[@id="homeIcon"]
+
+#Global Header
+/html/body/app-root/div[1]/app-header/header/nav
+
+#Button "Login"
+//*[@id="nav-link-login"]
+
+#Button "Home"
+//*[@id="nav-link-home"]
+
+#Button "Profile"
+//*[@id="nav-link-profile"]
+
+#Button "New Post"
+//*[@id="nav-link-new-post"]
+
+#Search Form
+//*[@id="navbarColor01"]/form
+
+#Search Bar field
+//*[@id="search-bar"]
+
+#Search Bar dropdown menu {
+//*[@id="navbarColor01"]/form/div/app-search-dropdown/div
+
+ - Follow Button from dropdown menu
+//*[@id="navbarColor01"]/form/div/app-search-dropdown/div/div[37]/app-small-user-profile/div/div[2]/button
+
+- User profile name
+//*[@id="navbarColor01"]/form/div/app-search-dropdown/div/div[37]/app-small-user-profile/div/div[1]/a
+
+-User image
+//*[@id="navbarColor01"]/form/div/app-search-dropdown/div/div[37]/app-small-user-profile/div/div[1]/img
+}
+#Exit
+//*[@id="navbarColor01"]/ul[2]/li/a
+
+
