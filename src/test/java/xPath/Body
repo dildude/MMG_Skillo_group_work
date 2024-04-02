@@ -1,0 +1,57 @@
+//div[@class='image-container'] -- profile picture
+//div[@class='edit-profile-pic'] -- edit button on the profile pic (need hover to be shown)
+
+//div[@class="container-fluid"]//h2 -- profile name
+
+//li[text()=' posts'] -- for post count
+//li[@id="followers"]
+//li[@id="following"]
+
+
+//div[@class="btn-group btn-group-toggle post-filter-buttons"]/label[text()= " All "]
+
+//label[text()= " All "]
+
+//div[@class="btn-group btn-group-toggle post-filter-buttons"]/label[text()= " Public "]
+
+//label[text()= " Public "]
+
+//div[@class="btn-group btn-group-toggle post-filter-buttons"]/label[text()= " Private "]
+
+//label[text()= " Private "]
+
+
+-- when hovered on the post the 2 elements --
+//i[@class="fas fa-heart"] //2 need to find a way to split
+
+//app-post[@class="col-4 app-post ng-star-inserted"][1]//following-sibling::div//i[@class="fas fa-heart"]
+//app-post[@class="col-4 app-post ng-star-inserted"][2]//following-sibling::div//i[@class="fas fa-heart"]
+
+//i[@class="fas fa-comment"] //2
+//app-post[@class="col-4 app-post ng-star-inserted"][1]//following-sibling::div//i[@class="fas fa-comment"]
+//app-post[@class="col-4 app-post ng-star-inserted"][2]//following-sibling::div//i[@class="fas fa-comment"]
+
+
+-- the to posts -- need to find a way to pick only one
+//div[@class="gallery-item"]
+or
+//app-post/div[@class="gallery-item"]
+
+??
+//app-post[@class="col-4 app-post ng-star-inserted"]//img[@src="https://i.imgur.com/vLypMm0.png"] :( - On every new log in the url to the img changes
+//app-post[1]
+//app-post[@class="col-4 app-post ng-star-inserted"]//img[@src="https://i.imgur.com/swgnWTQ.png"] :(
+//app-post[2]
+
+
+
+
+POP up when post is clicked
+//div[@class="container-fluid"] -- alot of xpath's here TO DO
+
+
+
+
+
+
+
