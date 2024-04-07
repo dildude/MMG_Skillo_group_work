@@ -106,7 +106,7 @@ public class LoginTests {
         //Submit the creds
         WebElement loginFormSubmitButton = driver.findElement(By.cssSelector("#sign-in-button"));
         loginFormSubmitButton.click();
-        
+
     }
 
     @AfterMethod
