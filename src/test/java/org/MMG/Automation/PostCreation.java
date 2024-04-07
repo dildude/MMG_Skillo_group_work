@@ -11,6 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.time.Duration;
 
 public class PostCreation {
@@ -33,8 +34,9 @@ public class PostCreation {
     }
 
     @Test
-    public  void createPost() {
+    public  void createPost() throws InterruptedException {
         driver.get(BASE_URL);
+        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
         System.out.println("Login page is open" + "\n");
 
         //Login
@@ -56,9 +58,11 @@ public class PostCreation {
         Assert.assertEquals(actualNewPostHeaderText, expectedNewPostHeaderText);
 
         //TODO to add img for the new post (with browse or drag and drop)
-        WebElement imageBrowser = driver.findElement(By.cssSelector("#choose-file"));
-        imageBrowser.click();
-        
+//        WebElement imageBrowser = driver.findElement(By.cssSelector("#choose-file"));
+//        File file = new File("./image.png");
+//        imageBrowser.sendKeys(file.getAbsolutePath());
+//        Thread.sleep(4444);
+
 
 
 
