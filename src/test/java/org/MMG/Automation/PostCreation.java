@@ -52,6 +52,19 @@ public class PostCreation {
         //Assuring we are on the correct page
         String expectedNewPostHeaderText = "Post a picture to share with your awesome followers";
         WebElement newPostHeader = driver.findElement(By.cssSelector("h3[class='text-center']")); //TODO See if it works
+        String actualNewPostHeaderText = newPostHeader.getText();
+        Assert.assertEquals(actualNewPostHeaderText, expectedNewPostHeaderText);
+
+        //TODO to add img for the new post (with browse or drag and drop)
+        WebElement imageBrowser = driver.findElement(By.cssSelector("#choose-file"));
+        imageBrowser.click();
+        WebElement fileInput = driver.findElement(By.id("fileInput"));
+        String imagePath = "\\src\\image.png";
+        fileInput.sendKeys(imagePath);
+        //TODO to add text in "post caption"
+        //TODO to submit the post
+        //todo to check if it post is added
+
 
     }
 
