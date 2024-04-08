@@ -58,6 +58,7 @@ public class PostCreation {
         Assert.assertEquals(actualNewPostHeaderText, expectedNewPostHeaderText);
 
         //TODO to add img for the new post (with browse or drag and drop)
+        driver.findElement(By.id("#choose-file")).sendKeys("C:\\Projects\\MMG_Skillo_group_work\\src\\image.png");
 //        WebElement imageBrowser = driver.findElement(By.cssSelector("#choose-file"));
 //        File file = new File("./image.png");
 //        imageBrowser.sendKeys(file.getAbsolutePath());
