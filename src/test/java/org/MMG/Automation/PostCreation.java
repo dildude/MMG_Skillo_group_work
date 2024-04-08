@@ -57,16 +57,16 @@ public class PostCreation {
         String actualNewPostHeaderText = newPostHeader.getText();
         Assert.assertEquals(actualNewPostHeaderText, expectedNewPostHeaderText);
 
-        //TODO to add img for the new post (with browse or drag and drop)
-        driver.findElement(By.xpath("(//input[@type='file'])[2]")).sendKeys("C:\\Users\\vbass\\IdeaProjects\\MMG_Skillo_group_work\\src\\image.png"); // Still doesn't work
+        //TODO Need to find a way to not use absolute path but the repo root
+        driver.findElement(By.xpath("(//input[@type='file'])[2]")).sendKeys("C:\\Users\\vbass\\IdeaProjects\\MMG_Skillo_group_work\\src\\image.png");
 
-        Thread.sleep(4444);
-        //TODO to add text in "post caption"
+        Thread.sleep(2222);
+        //putting caption
         WebElement addingCaption = driver.findElement(By.cssSelector("input[placeholder='Enter you post caption here']"));
         addingCaption.click();
         addingCaption.sendKeys("Test caption");
 
-        //TODO to submit the post
+        //Submitting the post
         WebElement clickingSubmitButton = driver.findElement(By.cssSelector("#create-post"));
         clickingSubmitButton.click();
 
