@@ -11,13 +11,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.awt.*;
 import java.io.File;
 import java.time.Duration;
 
 public class PostCreation {
     public static final String BASE_URL = "http://training.skillo-bg.com:4200/users/login";
     WebDriver driver = new ChromeDriver();
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
     @BeforeMethod
     public void initBrowser(){
@@ -70,7 +71,11 @@ public class PostCreation {
         WebElement clickingSubmitButton = driver.findElement(By.cssSelector("#create-post"));
         clickingSubmitButton.click();
 
-        //todo to check if it post is added
+        //pop up msg for new post created
+        WebElement messageAfterPost = driver.findElement(By.xpath("//div[@class=\"toast-message ng-star-inserted\"]"));
+        String actualMessageAfterPost = messageAfterPost.getText();
+        String expectedMessageAfterPost = "Post created!";
+        Assert.assertEquals(actualMessageAfterPost, expectedMessageAfterPost);
 
 
     }
