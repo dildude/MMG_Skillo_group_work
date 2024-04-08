@@ -58,17 +58,18 @@ public class PostCreation {
         Assert.assertEquals(actualNewPostHeaderText, expectedNewPostHeaderText);
 
         //TODO to add img for the new post (with browse or drag and drop)
-        driver.findElement(By.id("#choose-file")).sendKeys("C:\\Projects\\MMG_Skillo_group_work\\src\\image.png");
-//        WebElement imageBrowser = driver.findElement(By.cssSelector("#choose-file"));
-//        File file = new File("./image.png");
-//        imageBrowser.sendKeys(file.getAbsolutePath());
-//        Thread.sleep(4444);
+        driver.findElement(By.xpath("(//input[@type='file'])[2]")).sendKeys("C:\\Users\\vbass\\IdeaProjects\\MMG_Skillo_group_work\\src\\image.png"); // Still doesn't work
 
-
-
-
+        Thread.sleep(4444);
         //TODO to add text in "post caption"
+        WebElement addingCaption = driver.findElement(By.cssSelector("input[placeholder='Enter you post caption here']"));
+        addingCaption.click();
+        addingCaption.sendKeys("Test caption");
+
         //TODO to submit the post
+        WebElement clickingSubmitButton = driver.findElement(By.cssSelector("#create-post"));
+        clickingSubmitButton.click();
+
         //todo to check if it post is added
 
 
