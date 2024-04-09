@@ -19,13 +19,11 @@ public class PostCreation {
     public static final String BASE_URL = "http://training.skillo-bg.com:4200/users/login";
     WebDriver driver = new ChromeDriver();
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
     @BeforeMethod
     public void initBrowser(){
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
-
     @AfterMethod
     public void ClosingTheDriver() {
         if (driver!=null) {
@@ -33,13 +31,12 @@ public class PostCreation {
             System.out.println("* * * * * The driver is closed! * * * * *");
         }
     }
-
     @Test
     public  void createPost() throws InterruptedException {
         driver.get(BASE_URL);
         System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
         System.out.println("Login page is open" + "\n");
-
+        
         //Login
         login();
 
@@ -61,7 +58,6 @@ public class PostCreation {
         //TODO Need to find a way to not use absolute path but the repo root
         driver.findElement(By.xpath("(//input[@type='file'])[2]")).sendKeys("C:\\Users\\vbass\\IdeaProjects\\MMG_Skillo_group_work\\src\\image.png");
 
-        Thread.sleep(2222);
         //putting caption
         WebElement addingCaption = driver.findElement(By.cssSelector("input[placeholder='Enter you post caption here']"));
         addingCaption.click();
